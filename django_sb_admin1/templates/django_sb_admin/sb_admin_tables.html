@@ -1,0 +1,87 @@
+{% extends "django_sb_admin/base.html" %}
+
+{% load static %}
+<!-- -----------------title start---------------------------------------- -->
+
+{% block sb_admin_title %}
+Tables
+{% endblock sb_admin_title %}
+<!-- -------------------title end------------------------------------------ -->
+
+<!----------------------------- subheading ------------------------------>
+{% block sb_admin_subheading %}
+{% endblock sb_admin_subheading %}
+<!----------------------------subheading end  ---------------------------->
+ <!-- breadcrumb -->
+ {% block sb_admin_breadcrumb_active %}
+ <li class="breadcrumb-item active">Manage Students</li>
+ {% endblock sb_admin_breadcrumb_active %}
+
+ <!--------------------content start-------------------------------------  -->
+ {% block sb_admin_content %}  
+  <!-- DataTables Example -->
+        <div class="card mb-3">
+          <div class="card-header">
+            <i class="fas fa-table"></i>
+            Data Table Example</div>
+          <div class="card-body">
+            <div class="table-responsive">
+              <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                  <tr>
+                    <th>user</th>
+                    <th>user_name</th>
+                    <th>prn</th>
+                    <th>phone</th>
+                    <th>address</th>
+                    <th>age</th>
+                    <th>gender</th>
+                    <th>birth_date</th>
+                    <th>year</th>
+                    <th>branch</th>
+                    <th>book_limit</th>
+                  </tr>
+                </thead>
+                <tfoot>
+                  <tr>
+                    <th>user</th>
+                    <th>user_name</th>
+                    <th>prn</th>
+                    <th>phone</th>
+                    <th>address</th>
+                    <th>age</th>
+                    <th>gender</th>
+                    <th>birth_date</th>
+                    <th>year</th>
+                    <th>branch</th>
+                    <th>book_limit</th>
+                  </tr>
+                </tfoot>
+                <tbody>
+                  {% for student in employees %}
+                  <tr>
+                    <td>{{ student.user}}</td>
+                    <td>{{ student.user_name}}</td>
+                    <td>{{ student.prn}}</td>
+                    <td>{{ student.phone}}</td>
+                    <td>{{ student.address}}</td>
+                    <td>{{ student.age}}</td>
+                    <td>{{ student.gender}}</td>
+                    <td>{{ student.birth_date}}</td>
+                     <td>{{ student.year}}</td>
+                    <td>{{ student.branch}}</td>
+                    <td>{{ student.book_limit}}</td>
+                  </tr>
+                  {% endfor %}
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+        </div>
+
+        <p class="small text-center text-muted my-5">
+          <em>More table examples coming soon...</em>
+        </p>
+
+{% endblock sb_admin_content %}

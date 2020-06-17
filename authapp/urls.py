@@ -1,8 +1,14 @@
 from django.urls import path
-from .views import signin, signup, signout
+from . import views
 
 urlpatterns = [
-    path('signin/', signin, name='signin'),
-    path('signup/', signup, name='signup'),
-    path('logout/', signout, name='signout')
+    path('reset/', reset, name='reset'),
+    path('accounts/', include('allauth.urls'))
+    path('activate/<uidb64>/<token>',views.ActivateAccountView.as_view(),name='activate'),
+ path('signup/' ,views.handleSignup,name='handleSignup'),
+         
+         path('login/' ,views.handleLogin,name='handleLogin'),
+
+         path('logout/' ,views.handleLogout,name='handleLogout'),
+
 ]

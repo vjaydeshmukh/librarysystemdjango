@@ -1,0 +1,233 @@
+{% load static %}
+<style>
+  
+
+</style>
+   <!------------------------Left Sidebar------------------ -->
+  <ul class="sidebar navbar-nav">
+    {% block sb_admin_sidebar %}
+<li class="nav-item active">
+      <a class="nav-link" href="{% url "sb_admin_dashboard" %}">
+        <i class="fas fa-fw fa-tachometer-alt"></i>
+        <span>UserName</span>
+      </a>
+    </li>
+
+   
+    <!-- 1Dashboard -->
+    <li class="nav-item active">
+      <a class="nav-link" href="{% url "sb_admin_dashboard" %}">
+        <i class="fas fa-fw fa-tachometer-alt"></i>
+        <span>Dashboard</span>
+      </a>
+    </li>
+    <!-- 2Home -->
+    <li class="nav-item ">
+      <a class="nav-link" href="{% url "index" %}">
+        <i class="fas fa-arrow-left"></i>
+        <span>Home</span>
+      </a>
+    </li>
+
+    <!-- 3Students -->
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+        <i class="fas fa-fw fa-folder"></i>
+        <span>Students</span>
+      </a>
+      <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+        <h6 class="dropdown-header">Students Info:</h6>
+        <a class="dropdown-item" href="{% url "sb_admin_add" %}"><i class="fas fa-fw fa-user-circle"></i> Add Students</a>
+        <a class="dropdown-item" href="{% url "sb_admin_tables" %}"><i class="fas fa-fw fa-search"></i> Manage Students</a>
+        <a class="dropdown-item" href="{% url "approve_registration" %}">Library Registration</a>
+        <div class="dropdown-divider"></div>
+        <h6 class="dropdown-header">Other Pages:</h6>
+        <a class="dropdown-item" href="{% url "sb_admin_404" %}">404 Page</a>
+        <a class="dropdown-item" href="{% url "sb_admin_blank" %}">Blank Page</a>
+      </div>
+    </li>
+ <!-- 3Students -->
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+        <i class="fas fa-fw fa-folder"></i>
+        <span>Fine Records</span>
+      </a>
+      <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+        <h6 class="dropdown-header">Payment Info:</h6>
+        <a class="dropdown-item" href="{% url "sb_admin_add" %}"><i class="fas fa-fw fa-user-circle"></i>Online Payment</a>
+        <a class="dropdown-item" href="{% url "sb_admin_tables" %}"><i class="fas fa-fw fa-search"></i> Manage Students</a>
+        <a class="dropdown-item" href="{% url "approve_registration" %}">Library Registration</a>
+        <div class="dropdown-divider"></div>
+        <h6 class="dropdown-header">Other Pages:</h6>
+        <a class="dropdown-item" href="{% url "sb_admin_404" %}">404 Page</a>
+        <a class="dropdown-item" href="{% url "sb_admin_blank" %}">Blank Page</a>
+      </div>
+    </li>
+
+
+     <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+        <i class="fas fa-fw fa-folder"></i>
+        <span>Fine Records</span>
+      </a>
+      <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+        <h6 class="dropdown-header">Payment Info:</h6>
+        <a class="dropdown-item" href="{% url "sb_admin_add" %}"><i class="fas fa-fw fa-user-circle"></i>Online Payment</a>
+        <a class="dropdown-item" href="{% url "sb_admin_tables" %}"><i class="fas fa-fw fa-search"></i> Manage Students</a>
+        <a class="dropdown-item" href="{% url "approve_registration" %}">Library Registration</a>
+        <div class="dropdown-divider"></div>
+        <h6 class="dropdown-header">Other Pages:</h6>
+        <a class="dropdown-item" href="{% url "sb_admin_404" %}">404 Page</a>
+        <a class="dropdown-item" href="{% url "sb_admin_blank" %}">Blank Page</a>
+      </div>
+    </li>
+
+
+     <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+        <i class="fas fa-fw fa-folder"></i>
+        <span>Fine Records</span>
+      </a>
+      <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+        <h6 class="dropdown-header">Payment Info:</h6>
+        <a class="dropdown-item" href="{% url "sb_admin_add" %}"><i class="fas fa-fw fa-user-circle"></i>Online Payment</a>
+        <a class="dropdown-item" href="{% url "sb_admin_tables" %}"><i class="fas fa-fw fa-search"></i> Manage Students</a>
+        <a class="dropdown-item" href="{% url "approve_registration" %}">Library Registration</a>
+        <div class="dropdown-divider"></div>
+        <h6 class="dropdown-header">Other Pages:</h6>
+        <a class="dropdown-item" href="{% url "sb_admin_404" %}">404 Page</a>
+        <a class="dropdown-item" href="{% url "sb_admin_blank" %}">Blank Page</a>
+      </div>
+    </li>
+
+     <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+        <i class="fas fa-fw fa-folder"></i>
+        <span>Fine Records</span>
+      </a>
+      <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+        <h6 class="dropdown-header">Payment Info:</h6>
+        <a class="dropdown-item" href="{% url "sb_admin_add" %}"><i class="fas fa-fw fa-user-circle"></i>Online Payment</a>
+        <a class="dropdown-item" href="{% url "sb_admin_tables" %}"><i class="fas fa-fw fa-search"></i> Manage Students</a>
+        <a class="dropdown-item" href="{% url "approve_registration" %}">Library Registration</a>
+        <div class="dropdown-divider"></div>
+        <h6 class="dropdown-header">Other Pages:</h6>
+        <a class="dropdown-item" href="{% url "sb_admin_404" %}">404 Page</a>
+        <a class="dropdown-item" href="{% url "sb_admin_blank" %}">Blank Page</a>
+      </div>
+    </li>
+
+
+
+    <!-- 4School -->
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+        <i class="fas fa-fw fa-folder"></i>
+        <span href="">School</span>
+      </a>
+      <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+        <h6 class="dropdown-header">Librian Info:</h6>
+        <a class="dropdown-item" href="{% url "sb_admin_add" %}"><i class="fas fa-chalkboard-teacher"></i> Add Librian</a>
+        <a class="dropdown-item" href="{% url "sb_admin_tables" %}"><i class="fas fa-fw fa-search"></i> Manage Librian</a>
+        <a class="dropdown-item" href="{% url "approve_registration" %}">Teachers Registration</a>
+        <div class="dropdown-divider"></div>
+        <h6 class="dropdown-header">Academics Details:</h6>
+        <a class="dropdown-item" href="{% url "sb_admin_404" %}">Years</a>
+        <a class="dropdown-item" href="{% url "sb_admin_blank" %}">Department</a>
+         <a class="dropdown-item" href="{% url "sb_admin_blank" %}">Semister</a>
+      </div>
+    </li>
+
+
+    <!-- 5Transitions -->
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+        <i class="fas fa-fw fa-folder"></i>
+        <span>Transitions</span>
+      </a>
+      <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+        <!-- <h6 class="dropdown-header">Transitions Info:</h6> -->
+        <a class="dropdown-item" href="{% url "sb_admin_login" %}"><i class="fas fa-fw fa-user-circle"></i>Issue Book</a>
+        <a class="dropdown-item" href="{% url "sb_admin_register" %}"><i class="fas fa-fw fa-search"></i> Return Book</a>
+        <!-- <a class="dropdown-item" href="{% url "approve_registration" %}">Library Registration</a>
+        <div class="dropdown-divider"></div>
+        <h6 class="dropdown-header">Other Pages:</h6>
+        <a class="dropdown-item" href="{% url "sb_admin_404" %}">404 Page</a>
+        <a class="dropdown-item" href="{% url "sb_admin_blank" %}">Blank Page</a> -->
+      </div>
+    </li>
+    <!-- 6Books -->
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+        <i class="fas fa-fw fa-folder"></i>
+        <span>Books</span>
+      </a>
+      <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+        <h6 class="dropdown-header">Books Info:</h6>
+        <a class="dropdown-item" href="{% url "sb_admin_login" %}"><i class="fas fa-fw fa-user-circle"></i> Add Books</a>
+        <a class="dropdown-item" href="{% url "sb_admin_register" %}"><i class="fas fa-fw fa-search"></i> Manage Books</a>
+        <a class="dropdown-item" href="{% url "approve_registration" %}"><i class="fas fa-fw fa-user-circle"></i>Add Authors</a>
+        <div class="dropdown-divider"></div>
+        <h6 class="dropdown-header">Other Pages:</h6>
+        <a class="dropdown-item" href="{% url "sb_admin_404" %}">404 Page</a>
+        <a class="dropdown-item" href="{% url "sb_admin_blank" %}">Blank Page</a>
+      </div>
+    </li>
+    <!-- 6charts -->
+    <li class="nav-item">
+      <a class="nav-link" href="{% url "sb_admin_charts" %}">
+        <i class="fas fa-fw fa-chart-area"></i>
+        <span>Charts</span></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{% url "sb_admin_tables" %}">
+        <i class="fas fa-fw fa-table"></i>
+        <span>Tables</span></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{% url "sb_admin_tables" %}">
+        <i class="fas fa-fw fa-table"></i>
+        <span>Tables</span></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{% url "sb_admin_tables" %}">
+        <i class="fas fa-fw fa-table"></i>
+        <span>Tables</span></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{% url "sb_admin_tables" %}">
+        <i class="fas fa-fw fa-table"></i>
+        <span>Tables</span></a>
+    </li>
+     <li class="nav-item">
+      <a class="nav-link" href="{% url "sb_admin_tables" %}">
+        <i class="fas fa-fw fa-table"></i>
+        <span>Tables</span></a>
+    </li>
+     <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+        <i class="fas fa-fw fa-folder"></i>
+        <span>My Profile</span>
+      </a>
+      <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+        <h6 class="dropdown-header">Librian Info:</h6>
+        <a class="dropdown-item" href="{% url "sb_admin_add" %}"><i class="fas fa-retweet"></i> Change Password</a>
+        <a class="dropdown-item" href="{% url "sb_admin_tables" %}"><i class="fas fa-fw fa-search"></i> Update profile</a>
+        <a class="dropdown-item" href="{% url "approve_registration" %}">Teachers Registration</a>
+        <div class="dropdown-divider"></div>
+        <h6 class="dropdown-header">Academics Details:</h6>
+        <a class="dropdown-item" href="{% url "sb_admin_404" %}">Departments</a>
+        <a class="dropdown-item" href="{% url "sb_admin_blank" %}">Years</a>
+         <a class="dropdown-item" href="{% url "sb_admin_blank" %}">Semister</a>
+      </div>
+    </li>
+<hr class="sidebar-divider">
+
+    {% endblock sb_admin_sidebar %}
+
+
+      {% block sidebar %}
+    {% endblock %}
+  </ul>
+
+<!-- --------------------------------------------------------------- -->

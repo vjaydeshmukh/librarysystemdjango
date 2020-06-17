@@ -1,0 +1,276 @@
+{% extends "django_sb_admin/base.html" %}
+
+
+{% load static %}
+{% block sb_admin_title %}Dashboarddddddddddd{% endblock sb_admin_title %}
+{% block sb_admin_subheading %}<small>Statistics Overview</small>{% endblock sb_admin_subheading %}
+
+<!----------------------------- breadcrumb------------------- -->
+{% block sb_admin_breadcrumb_active %}
+ <li class="breadcrumb-item active">
+      <i class="fa fa-bar-chart-o"></i>Dashboard
+ </li>{% endblock sb_admin_breadcrumb_active %}
+<!-------------------------- breadcrumb end--------------------- -->
+
+
+
+{% block sb_admin_content %}
+
+
+
+<!------------------------------- Icon Cards------------------------------->
+        <div class="row">
+ <style>
+   .bgb{background-color: #000000 !important;}
+   .bgg {
+   background: linear-gradient(45deg, #4099ff, #73b4ff);
+
+}
+.bg-dangerr {
+    background-color: #e74c3c;
+    border-color: #e74c3c;
+    color: #fff !important;
+}
+.bg-warningg {
+    background-color: #f39c12;
+    border-color: #f39c12;
+    color: #fff !important;
+}
+.bg-successs {
+    background-color: #27ae60;
+    border-color: #27ae60;
+    color: #fff !important;
+}
+.card-body-icon {
+    position: absolute;
+    z-index: 0;
+    top: -1.00rem;
+    right: 1rem;
+    opacity: 0.4;
+    font-size: 5rem;
+    -webkit-transform: rotate(15deg);
+    transform: rotate(5deg);
+}
+ </style>
+ 
+      <!------------------------ 1 st card --------------------------->
+      {% include "django_sb_admin/main/card.html" %}
+
+<!--------------------- End card ------------------------------------------->
+
+<!----------------------- Area Chart Example----------------------------->
+        <div class="card mb-3">
+          <div class="card-header">
+           <i class="fas fa-chart-bar"></i>
+                Bar Chart Example</div>
+
+          <div class="card-body">
+                <canvas id="myBarChart" width="100%" height="30"></canvas>
+          </div>
+          <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+        </div>
+           <!-- <div class="row">
+          <div class="col-lg-8">
+            <div class="card mb-3">
+              <div class="card-header">
+                <i class="fas fa-chart-bar"></i>
+                Bar Chart Example</div>
+              <div class="card-body">
+                <canvas id="myBarChart" width="100%" height="30"></canvas>
+              </div>
+              <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+            </div>
+          </div>
+ -->
+<!----------------------- DataTables Example -------------------------------->
+        <div class="card mb-3">
+          <div class="card-header">
+            <i class="fas fa-table"></i>
+            Data Table Example</div>
+          <div class="card-body">
+            <div class="table-responsive">
+              <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                                <div class="pb-3">
+
+                 <a class="btn btn-primary" href="{% url "sb_admin_blank" %}" >
+                  <i class="fas fa-plus "></i> Add</a>&nbsp
+                  <a class="btn btn-success" href="#" data-toggle="modal" data-target="#Id" > <i class="fas fa-upload "></i> Import csv</a> &nbsp
+                  <a class="btn btn-warning" href="#" data-toggle="modal" data-target="#Import" > <i class="fas fa-download "></i> Export csv</a> &nbsp
+                 <br></div>
+
+                <thead>
+                  <tr>
+                    <th>Sr.No</th>
+                    <th>PRN</th>
+                    <th>Image</th>
+                    <th>Name</th>
+                    <th>Branch</th>
+                    <th>Issuded Books</th>
+                    <th>View</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                    <th>Delete</th>
+                  </tr>
+                </thead>
+                <tfoot>
+                  <tr>
+                    <th>Sr.No</th>
+                    <th>PRN</th>
+                    <th>Image</th>
+                    <th>Name</th>
+                    <th>Branch</th>
+                    <th>Issuded Books</th>
+                     <th>View</th>
+                     <th>Edit</th>
+                     <th>Delete</th>
+                     <th>Delete</th>
+                  </tr>
+                </tfoot>
+                <tbody>
+                  {% for student in employees %}
+                  <tr>
+                    <td>{{ student.id}}</td>
+                    <td>{{ student.eid}}</td>
+                    <td>{{ student.ename}}</td>
+                    <td>{{ student.email}}</td>
+                    <td>{{ student.econtact}}</td>
+                    <td><img src="../../media/{{ student.eimg}}" height="100" width="100"></td>
+                    <td><img src=""></td>
+                    <td>  
+                      <a class="btn btn-info" href="/edit/{{ student.id }}" > <i class="fas fa-eye "></i> View</a>
+                    </td>
+                    <td>  
+                      <a class="btn btn-primary" href="/edit/{{ student.id }}" > <i class="fas fa-edit "></i> Edit</a>
+                    </td>
+                    <td>  
+                      <a class="btn btn-danger" href="/delete/{{ student.id}}"> <i class="fas fa-trash "></i> Delete</a>
+                    </td>
+                  </tr>
+                  {% endfor %}
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+<!------------------------------ End TAble ---------------------------->
+<br>
+
+ <div class="row">
+          <div class="col-lg-8">
+            <div class="card mb-3">
+              <div class="card-header">
+                <i class="fas fa-chart-bar"></i>
+                Bar Chart Example</div>
+              <div class="card-body">
+                <canvas id="myBarChart" width="100%" height="50"></canvas>
+              </div>
+              <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="card mb-3">
+              <div class="card-header">
+                <i class="fas fa-chart-pie"></i>
+                Pie Chart Example</div>
+              <div class="card-body">
+                <canvas id="myPieChart" width="100%" height="100"></canvas>
+              </div>
+              <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+            </div>
+          </div>
+        </div>
+
+        <p class="small text-center text-muted my-5">
+          <em>More chart examples coming soon...</em>
+        </p>
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-------------------------------------- modal import-------------------------->
+ <div class="modal fade" id="Import" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Upload File</h5>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>             <div class="col-sm-12">
+
+          <input type="text" class="form-control" placeholder="Email Id" name="emailid">
+         <!--  <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div> -->
+          <div class="modal-footer">
+            <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+            <a class="btn btn-primary" href="{% url "sb_admin_404" %}" >Upload</a>
+          </div>
+        </div>
+      </div>
+    </div>
+<!-- -----------------------------model import End------------------------->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- /.row -->
+
+<!-- /.row -->
+{% endblock sb_admin_content %}
+
+
+{% block sb_admin_custom_js %}
+
+
+
+
+  <script src="{% static "vendor/chart.js/Chart.min.js" %}"></script>
+  <script src="{% static "js/demo/chart-area-demo.js" %}"></script>
+  <script src="{% static "js/demo/chart-bar-demo.js" %}"></script>
+  <script src="{% static "js/demo/chart-pie-demo.js" %}"></script>
+
+    <!-- Morris Charts JavaScript -->
+      <script src="{% static "vendor/chart.js/Chart.min.js" %}"></script>
+
+    <script src="{% static "js/plugins/morris/raphael.min.js" %}"></script>
+    <script src="{% static "js/plugins/morris/morris.min.js" %}"></script>
+    <script src="{% static "js/plugins/morris/morris-data.js" %}"></script>
+
+    <!-- Flot Charts JavaScript -->
+    <!--[if lte IE 8]><script src="js/excanvas.min.js"></script><![endif]-->
+    <script src="{% static "js/demo/chart-bar-demo.js" %}"></script>
+    <script src="{% static "js/plugins/flot/jquery.flot.js" %}"></script>
+    <script src="{% static "js/plugins/flot/jquery.flot.tooltip.min.js" %}"></script>
+    <script src="{% static "js/plugins/flot/jquery.flot.resize.js" %}"></script>
+    <script src="{% static "js/plugins/flot/jquery.flot.pie.js" %}"></script>
+    <script src="{% static "js/plugins/flot/flot-data.js" %}"></script>
+{% endblock sb_admin_custom_js %}

@@ -1,0 +1,89 @@
+{% extends "django_sb_admin/base.html" %}
+
+
+{% load static %}
+{% block sb_admin_title %}Dashboarddddddddddd{% endblock sb_admin_title %}
+{% block sb_admin_subheading %}<small>Statistics Overview</small>{% endblock sb_admin_subheading %}
+
+<!----------------------------- breadcrumb------------------- -->
+{% block sb_admin_breadcrumb_active %}
+ <li class="breadcrumb-item active">
+      <i class="fa fa-bar-chart-o"></i>Dashboard
+ </li>{% endblock sb_admin_breadcrumb_active %}
+<!-------------------------- breadcrumb end--------------------- -->
+
+
+
+{% block sb_admin_content %}
+
+<!----------------------- DataTables Example -------------------------------->
+        <div class="card mb-3">
+          <div class="card-header">
+            <i class="fas fa-table"></i>
+            Data Table Example</div>
+          <div class="card-body">
+            <div class="table-responsive">
+              <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                 <a class="btn btn-primary" href="{% url "sb_admin_blank" %}" >
+                  <i class="fas fa-plus "></i> Add</a>&nbsp
+                  <a class="btn btn-success" href="#" data-toggle="modal" data-target="#Id" > <i class="fas fa-upload "></i> Import csv</a> &nbsp
+                  <a class="btn btn-warning" href="#" data-toggle="modal" data-target="#Import" > <i class="fas fa-download "></i> Export csv</a> &nbsp
+                 <br>
+                 
+
+                <thead>
+                  <tr>
+                    <th>Sr.No</th>
+                    <th>PRN</th>
+                    <th>Image</th>
+                    <th>Name</th>
+                    <th>Branch</th>
+                    <th>Issuded Books</th>
+                    <th>View</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                    <th>Delete</th>
+                  </tr>
+                </thead>
+                <tfoot>
+                  <tr>
+                    <th>Sr.No</th>
+                    <th>PRN</th>
+                    <th>Image</th>
+                    <th>Name</th>
+                    <th>Branch</th>
+                    <th>Issuded Books</th>
+                     <th>View</th>
+                     <th>Edit</th>
+                     <th>Delete</th>
+                     <th>Delete</th>
+                  </tr>
+                </tfoot>
+                <tbody>
+                  {% for student in employees %}
+                  <tr>
+                    <td>{{ student.id}}</td>
+                    <td>{{ student.eid}}</td>
+                    <td>{{ student.ename}}</td>
+                    <td>{{ student.email}}</td>
+                    <td>{{ student.econtact}}</td>
+                    <td><img src="../../media/{{ student.eimg}}" height="100" width="100"></td>
+                    <td><img src=""></td>
+                    <td>  
+                      <a class="btn btn-info" href="/edit/{{ student.id }}" > <i class="fas fa-eye "></i> View</a>
+                    </td>
+                    <td>  
+                      <a class="btn btn-primary" href="/edit/{{ student.id }}" > <i class="fas fa-edit "></i> Edit</a>
+                    </td>
+                    <td>  
+                      <a class="btn btn-danger" href="/delete/{{ student.id}}"> <i class="fas fa-trash "></i> Delete</a>
+                    </td>
+                  </tr>
+                  {% endfor %}
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+<!------------------------------ End TAble ---------------------------->
+{% endblock sb_admin_content %}

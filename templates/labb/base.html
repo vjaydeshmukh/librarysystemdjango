@@ -1,0 +1,43 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Welcome in Unique Library</title>
+	<link rel="stylesheet" type="text/css" href="{% static '/css/main.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static '/css/bootstrap.min.css' %}">
+	<script src="{% static '/js/bootstrap.min.js' %}"></script>
+  <script src="{% static '/js/jquery-3.3.1.min.js' %}"></script>
+</head>
+<body>
+ <!-- Navbar starting -->
+<nav class="navbar navbar-expand-lg nav-item fixed-top navbar-dark bg-dark">
+  <span class="navbar-brand brand">Unique Library</span>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls=" navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item ">
+        <a class="nav-link" href="">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="about.html">About Us</a>
+      </li>
+       <li class="nav-item">
+        <a class="nav-link" href="contact.html">Contact Us</a>
+      </li>
+    </ul>
+    <form action="http://localhost/lab/student" class="form-inline my-2 my-lg-0">
+      <button class="btn btn-outline-success my-2 my-sm-0">Student Login</button>
+    </form>&nbsp&nbsp&nbsp
+    <form action="http://localhost/admin" class="form-inline my-2 my-lg-0">
+      <button class="btn btn-outline-success my-2 my-sm-0" >Staff Login</button>
+    </form>
+  </div>
+</nav>
+<div>
+	<img style="width: 100%"; src="{% static '/images/library.jpg' %}">	
+</div>
+</body>
+</html>

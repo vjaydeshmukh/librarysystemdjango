@@ -1,0 +1,503 @@
+{% extends "django_sb_admin/base.html" %}
+{% load static %}
+{% block sb_admin_title %}404{% endblock sb_admin_title %}
+{% block sb_admin_custom_css %}{% endblock sb_admin_custom_css %}
+{% block sb_admin_subheading %}{% endblock sb_admin_subheading %}
+{% block sb_admin_breadcrumb_active %}
+ <li class="breadcrumb-item active">
+      <i class="fa fa-bar-chart-o""></i>404
+ </li>
+{% endblock sb_admin_breadcrumb_active %}
+
+{% block sb_admin_content %}
+
+       <!-- Page Content -->
+        <h1 class="display-1">404</h1>
+        <p class="lead">Page not found. You can
+          <a href="javascript:history.back()">go back</a>
+          to the previous page, or
+          <a href="{% url "sb_admin_start" %}">return home</a>.</p>
+
+
+  <style type="text/css">
+    a:link {
+      text-decoration: none;
+    }
+
+    .menu {
+      top: 50px;
+    }
+
+    h6 {
+      color: white;
+    }
+
+    .order-card {
+      color: #fff;
+    }
+
+    .bg-c-blue {
+      background: linear-gradient(45deg, #4099ff, #73b4ff);
+    }
+
+    .bg-c-green {
+      background: linear-gradient(45deg, #2ed8b6, #59e0c5);
+    }
+
+    .bg-c-yellow {
+      background: linear-gradient(45deg, #FFB64D, #ffcb80);
+    }
+
+    .bg-c-pink {
+      background: linear-gradient(45deg, #FF5370, #ff869a);
+    }
+
+
+    .card {
+      border-radius: 5px;
+      -webkit-box-shadow: 0 1px 2.94px 0.06px rgba(4, 26, 55, 0.16);
+      box-shadow: 0 1px 2.94px 0.06px rgba(4, 26, 55, 0.16);
+      border: none;
+      margin-bottom: 30px;
+      -webkit-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .card .card-block {
+      padding: 25px;
+    }
+
+    .order-card i {
+      font-size: 26px;
+    }
+
+    .f-left {
+      float: left;
+    }
+
+    .f-right {
+      float: right;
+    }
+  </style>
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-4 col-xl-3">
+      <div class="card bg-c-blue order-card">
+        <div class="card-block">
+          <a href="/admin-view-doctor">
+            <h6 class="m-b-20 ">First Year</h6>
+
+          </a>
+          <br>
+          <i class="fas fa-user-nurse f-left"></i>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 col-xl-3">
+      <div class="card bg-c-green order-card">
+        <div class="card-block">
+          <a href="/admin-add-doctor">
+            <h6 class="m-b-20">Second Year</h6>
+          </a>
+          <br>
+          <h2 class="text-right"><i class="fas fa-user-plus f-left"></i></h2>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 col-xl-3">
+      <div class="card bg-c-yellow order-card">
+        <div class="card-block">
+          <a href="/admin-approve-doctor">
+            <h6 class="m-b-20">Third Year</h6>
+          </a>
+          <br>
+          <h2 class="text-right"><i class="fas fa-check-circle f-left"></i></h2>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 col-xl-3">
+      <div class="card bg-c-pink order-card">
+        <div class="card-block">
+          <a href="/admin-view-doctor-specialisation">
+            <h6 class="m-b-20">Fourth Year</h6>
+          </a>
+          <br>
+          <h2 class="text-right"><i class="fas fa-user-md f-left"></i></h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-4 col-xl-3">
+      <div class="card bg-c-blue order-card">
+        <div class="card-block">
+          <a href="/admin-view-doctor">
+            <h6 class="m-b-20">First Year</h6>
+          </a>
+          <br>
+          <h2 class="text-right"><i class="fas fa-user-nurse f-left"></i></h2>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 col-xl-3">
+      <div class="card bg-c-green order-card">
+        <div class="card-block">
+          <a href="/admin-add-doctor">
+            <h6 class="m-b-20">Second Year</h6>
+          </a>
+          <br>
+          <h2 class="text-right"><i class="fas fa-user-plus f-left"></i></h2>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 col-xl-3">
+      <div class="card bg-c-yellow order-card">
+        <div class="card-block">
+          <a href="/admin-approve-doctor">
+            <h6 class="m-b-20">Third Year</h6>
+          </a>
+          <br>
+          <h2 class="text-right"><i class="fas fa-check-circle f-left"></i></h2>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 col-xl-3">
+      <div class="card bg-c-pink order-card">
+        <div class="card-block">
+          <a href="/admin-view-doctor-specialisation">
+            <h6 class="m-b-20">Fourth Year</h6>
+          </a>
+          <br>
+          <h2 class="text-right"><i class="fas fa-user-md f-left"></i></h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+
+  <style media="screen">
+    .market-update-block {
+      padding: 2em 2em;
+      background: #999;
+    }
+
+    .market-update-block h3 {
+      color: #fff;
+      font-size: 2.5em;
+      font-family: 'Carrois Gothic', sans-serif;
+    }
+
+    .market-update-block h4 {
+      font-size: 1.2em;
+      color: #fff;
+      margin: 0.3em 0em;
+      font-family: 'Carrois Gothic', sans-serif;
+    }
+
+    .market-update-block p {
+      color: #fff;
+      font-size: 0.8em;
+      line-height: 1.8em;
+    }
+
+    .market-update-block.clr-block-1 {
+      background: #ff0000;
+      margin-right: 0.8em;
+      box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+      transition: 0.5s all;
+      -webkit-transition: 0.5s all;
+      -moz-transition: 0.5s all;
+      -o-transition: 0.5s all;
+    }
+
+    .market-update-block.clr-block-2 {
+      background: #FC8213;
+      margin-right: 0.8em;
+      box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+      transition: 0.5s all;
+      -webkit-transition: 0.5s all;
+      -moz-transition: 0.5s all;
+      -o-transition: 0.5s all;
+    }
+
+    .market-update-block.clr-block-3 {
+      background: #1355f9;
+      box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+      transition: 0.5s all;
+      -webkit-transition: 0.5s all;
+      -moz-transition: 0.5s all;
+      -o-transition: 0.5s all;
+    }
+
+    .market-update-block.clr-block-1:hover {
+      background: #3C3C3C;
+      transition: 0.5s all;
+      -webkit-transition: 0.5s all;
+      -moz-transition: 0.5s all;
+      -o-transition: 0.5s all;
+    }
+
+    .market-update-block.clr-block-2:hover {
+      background: #3C3C3C;
+      transition: 0.5s all;
+      -webkit-transition: 0.5s all;
+      -moz-transition: 0.5s all;
+      -o-transition: 0.5s all;
+    }
+
+    .market-update-block.clr-block-3:hover {
+      background: #3C3C3C;
+      transition: 0.5s all;
+      -webkit-transition: 0.5s all;
+      -moz-transition: 0.5s all;
+      -o-transition: 0.5s all;
+    }
+
+    .market-update-right i.fa.fa-user-o {
+      font-size: 3em;
+      color: #68AE00;
+      width: 80px;
+      height: 80px;
+      background: #fff;
+      text-align: center;
+      border-radius: 49px;
+      -webkit-border-radius: 49px;
+      -moz-border-radius: 49px;
+      -o-border-radius: 49px;
+      line-height: 1.7em;
+    }
+
+    .market-update-right i.fa.fa-user-md {
+      font-size: 3em;
+      color: #FC8213;
+      width: 80px;
+      height: 80px;
+      background: #fff;
+      text-align: center;
+      border-radius: 49px;
+      -webkit-border-radius: 49px;
+      -moz-border-radius: 49px;
+      -o-border-radius: 49px;
+      line-height: 1.7em;
+    }
+
+    .market-update-right i.fa.fa-calendar {
+      font-size: 3em;
+      color: #337AB7;
+      width: 80px;
+      height: 80px;
+      background: #fff;
+      text-align: center;
+      border-radius: 49px;
+      -webkit-border-radius: 49px;
+      -moz-border-radius: 49px;
+      -o-border-radius: 49px;
+      line-height: 1.7em;
+    }
+
+    .market-update-left {
+      padding: 0px;
+    }
+  </style>
+
+
+<body>
+  <div class="market-updates">
+    <div class="col-md-4 market-update-gd">
+      <div class="market-update-block clr-block-1">
+        <div class="col-md-8 market-update-left">
+          <h3>{{doctorcount}}</h3>
+          <h4>Total Doctor</h4>
+          <p>Approval Required : {{pendingdoctorcount}}</p>
+        </div>
+        <div class="col-md-4 market-update-right">
+          <i class="fa fa-user-md"></i>
+        </div>
+        <div class="clearfix"> </div>
+      </div>
+    </div>
+    <div class="col-md-4 market-update-gd">
+      <div class="market-update-block clr-block-2">
+        <div class="col-md-8 market-update-left">
+          <h3>{{patientcount}}</h3>
+          <h4>Total Patient</h4>
+          <p>Wants to Admit : {{pendingpatientcount}}</p>
+        </div>
+        <div class="col-md-4 market-update-right">
+          <i class="fa fa-user-o"></i>
+        </div>
+        <div class="clearfix"> </div>
+      </div>
+    </div>
+    <div class="col-md-4 market-update-gd">
+      <div class="market-update-block clr-block-3">
+        <div class="col-md-8 market-update-left">
+          <h3>{{appointmentcount}}</h3>
+          <h4>Total Appointment</h4>
+          <p>Approve Appointments :{{pendingappointmentcount}} </p>
+        </div>
+        <div class="col-md-4 market-update-right">
+          <i class="fa fa-calendar"> </i>
+        </div>
+        <div class="clearfix"> </div>
+      </div>
+    </div>
+    <div class="clearfix"> </div>
+  </div>
+</body> -->
+<!--
+  developed By : sumit kumar
+  facebook : fb.com/sumit.luv
+  youtube : youtube.com/lazycoders
+  -->
+
+
+    <div class="row">
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+            <a class="dashboard-stat bg-primary" href="#">
+    
+                <span class="number counter">{{ students }}</span>
+                <span class="name">Reggd Studetns</span>
+                <span class="bg-icon"><i class="fa fa-users"></i></span>
+            </a>
+            <!-- /.dashboard-stat -->
+        </div>
+        <!-- /.col-lg-3 col-md-3 col-sm-6 col-xs-12 -->
+    
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+            <a class="dashboard-stat bg-danger" href="#">
+                <span class="number counter">{{ subjects }}</span>
+                <span class="name">Subjects Listed</span>
+                <span class="bg-icon"><i class="fa fa-ticket"></i></span>
+            </a>
+            <!-- /.dashboard-stat -->
+        </div>
+        <!-- /.col-lg-3 col-md-3 col-sm-6 col-xs-12 -->
+    
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+            <a class="dashboard-stat bg-warning" href="#">
+                <span class="number counter">{{ cls }}</span>
+                <span class="name">Total classes listed</span>
+                <span class="bg-icon"><i class="fa fa-bank"></i></span>
+            </a>
+            <!-- /.dashboard-stat -->
+        </div>
+        <!-- /.col-lg-3 col-md-3 col-sm-6 col-xs-12 -->
+    
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+            <a class="dashboard-stat bg-success" href="#">
+    
+                <span class="number counter">{{ results }}</span>
+                <span class="name">Results Declared</span>
+                <span class="bg-icon"><i class="fa fa-file-text"></i></span>
+            </a>
+            <!-- /.dashboard-stat -->
+        </div>
+        
+        </div> -->
+        <!-- /.col-lg-3 col-md-3 col-sm-6 col-xs-12 -->
+
+
+
+
+        
+    
+    </div>
+    <!-- /.row -->
+
+
+{% block javascript_code %}
+    <script>
+        $(function () {
+
+            // Counter for dashboard stats
+            $('.counter').counterUp({
+                delay: 10,
+                time: 1000
+            });
+
+            // Welcome notification
+            toastr.options = {
+                "closeButton": true,
+                "debug": false,
+                "newestOnTop": false,
+                "progressBar": false,
+                "positionClass": "toast-top-right",
+                "preventDuplicates": false,
+                "onclick": null,
+                "showDuration": "300",
+                "hideDuration": "1000",
+                "timeOut": "5000",
+                "extendedTimeOut": "1000",
+                "showEasing": "swing",
+                "hideEasing": "linear",
+                "showMethod": "fadeIn",
+                "hideMethod": "fadeOut"
+            }
+            toastr["success"]("Welcome to student Result Management System!");
+
+        });
+    </script>
+{% endblock javascript_code %}
+
+
+
+
+
+
+
+
+
+                
+{% endblock sb_admin_content %}
+
+{% block sb_admin_custom_js %}
+
+  <script src="{% static "vendor/chart.js/Chart.min.js" %}"></script>
+  <script src="{% static "js/demo/chart-area-demo.js" %}"></script>
+  <script src="{% static "js/demo/chart-bar-demo.js" %}"></script>
+  <script src="{% static "js/demo/chart-pie-demo.js" %}"></script>
+
+{% endblock sb_admin_custom_js %}
+
+
+
+
+<!--
+  developed By : sumit kumar
+  facebook : fb.com/sumit.luv
+  youtube : youtube.com/lazycoders
+  -->
+

@@ -1,0 +1,13 @@
+{% extends 'django_sb_admin/base.html' %}
+
+{% block body %}
+  <h2>Homepage</h2>
+  <p>Welcome to My Site, {% if user.is_authenticated %}{{ user.username }}{% else %}visitor!!{% endif %}</p>
+  <p>
+    <strong>Total user registered: </strong>{{ count }}
+  </p>
+  <br><br>
+  <button type="button" onclick="location.href='{% url 'create' %}'">Create Report</button>
+  <button type="button">Check Report</button>
+{% endblock %}
+

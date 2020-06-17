@@ -1,8 +1,23 @@
+
+
+
+
+
+
+
 {% extends 'base.html' %}
 {% load static %}
+{% load socialaccount %}
 
 {% block content %}
-<div class="limiter">
+
+ <div class="wrapper fadeInDown">
+          
+                <!-- Tabs Titles -->
+
+                <!-- Icon -->
+                <div class="fadeIn first">
+<div class="limiter fadeInDown">
 	<div class="container-login100" style="background-image: url({% static 'images/bg-01.jpg' %})">
 		<div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54">
 			<form class="login100-form validate-form" method="POST">
@@ -10,6 +25,7 @@
 				<span class="login100-form-title p-b-49">
 					Registration
 				</span>
+                            {% include 'flash_messages.html'%}
 
 				<div class="wrap-input100 validate-input m-b-23" data-validate = "Email is reauired">
 					<span class="label-input100">First Name</span>
@@ -26,6 +42,9 @@
 				</div>
 
 				<div class="wrap-input100 validate-input m-b-23" data-validate = "Email is reauired">
+					{% if emailerror %}
+						<p style="color: red;">{{ emailerror }}</p>
+					{% endif %}
 					<span class="label-input100">Email</span>
 					<!-- <input class="input100" type="email" name="email" placeholder="Type your email"> -->
 					{{ form.email }}
@@ -50,12 +69,11 @@
 				</div>
 
 				<div class="wrap-input100 validate-input" data-validate="Password is required">
-					<span class="label-input100">Confirm assword</span>
+					<span class="label-input100">Confirm password</span>
 					<!-- <input class="input100" type="password" name="conf-pass" placeholder="Type your password again"> -->
 					{{ form.confirm_password }}
 					<span class="focus-input100" data-symbol="&#xf190;"></span>
 				</div>
-				
 				<!-- <div class="text-right p-t-8 p-b-31">
 					<a href="#">
 						Forgot password?
@@ -82,12 +100,17 @@
 					<a href="#" class="login100-social-item bg1">
 						<i class="fa fa-facebook"></i>
 					</a>
-
-					<a href="#" class="login100-social-item bg2">
-						<i class="fa fa-twitter"></i>
+<style>
+						.bg2 {
+    background-color: #000000;
+}
+						
+					</style>
+					<a  href="{% provider_login_url 'github' %}" class="login100-social-item bg2">
+						<i class="fa fa-github"></i>
 					</a>
 
-					<a href="#" class="login100-social-item bg3">
+					<a href="{% provider_login_url 'google' %}"  class="login100-social-item bg3">
 						<i class="fa fa-google"></i>
 					</a>
 				</div>

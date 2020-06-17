@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    .card {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      max-width: 300px;
+      margin: auto;
+      text-align: center;
+      font-family: arial;
+    }
+
+    .title {
+      color: grey;
+      font-size: 18px;
+    }
+
+ .spec_offer {
+    position: absolute; 
+    top: 15px;
+    left: 16px;
+    width: 118px;
+    height: 36px;
+    background: #181818;
+}
+  .text-center {
+    text-align: center!important;
+
+}
+.spec h1{ background: #13fdd4;
+ font-color: #FFFFFF;}
+
+.spec_offer a {
+    display: block;
+    font-family: 'Oswald', sans-serif;
+    font-size: 16px;
+    color: #FFFFFF;
+    line-height: 36px;
+    font-weight: 400;
+}
+
+
+    button {
+      border: none;
+      outline: 0;
+      display: inline-block;
+      padding: 8px;
+      color: white;
+      background-color: #000;
+      cursor: pointer;
+      width: 50%;
+      font-size: 18px;
+    }
+
+
+    button.eee {
+      border: none;
+      outline: 0;
+      display: inline-block;
+      padding: 8px;
+      color: white;
+      background-color: #01ff0b;
+      cursor: pointer;
+      width: 50%;
+      font-size: 18px;
+    }
+
+
+
+    button:hover,
+    a:hover {
+      opacity: 0.7;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: auto auto auto;
+      padding: 10px;
+    }
+.grid-item {
+  padding-top:30px;
+}
+
+    a:link {
+      text-decoration: none;
+    }
+
+    a {
+      color: white;
+    }
+    h1{text-align: center;}
+  </style>
+</head>
+
+<body>
+
+
+<h1>Java Books</h1>
+  <div class="grid-container">
+    <div class="grid-item">
+      <div class="card">
+        <img src="{% static "images/admin.png" %}" alt="John" style="width:100%">
+        <p class="title">ADMIN</p>
+        <p><button><a href="/adminclick">View</a></button></p>
+      </div>
+
+    </div>
+
+    <div class="grid-item">
+      <div class="card">
+        <img src="{% static "images/teacher.png" %}" alt="John" style="width:100%">
+        <p class="title">TEACHER</p>
+        <p><button><a href="/teacherclick">View</a></button></p>
+      </div>
+    </div>
+
+    <div class="grid-item">
+      <div class="card">
+        <img src="{% static "images/student1.png" %}" alt="John" style="width:100%">
+        <p class="title">STUDENT</p>
+        <p><button><a href="/studentclick">View</a></button></p>
+      </div>
+    </div>
+
+
+
+
+
+
+
+   <!--  <div class="grid-item">
+      <div class="card">
+        <img src="{% static "images/sangam.jpg" %}" alt="John" style="width:100%">
+        <p class="title">Java Book</p>
+        <p><button><a href="/studentclick">View</a></button><button class="eee"><a href="/studentclick">Available</a></button></p>
+
+      </div>
+    </div>
+    <div class="grid-item">
+      <div class="card">
+        <img src="{% static "images/student1.png" %}" alt="John" style="width:100%">
+        <p class="title">STUDENT</p>
+        <p><button><a href="/studentclick">View</a></button></p>
+      </div>
+    </div>
+    <div class="grid-item">
+      <div class="card">
+        <img src="{% static "images/student1.png" %}" alt="John" style="width:100%">
+        <p class="title">STUDENT</p>
+        <p><button><a href="/studentclick">View</a></button></p>
+      </div>
+    </div>
+    <div class="grid-item">
+      <div class="card">
+        <img src="{% static "images/student1.png" %}" alt="John" style="width:100%">
+        <p class="title">STUDENT</p>
+        <p><button><a href="/studentclick">View</a></button></p>
+      </div>
+    </div> -->
+<!-- Destinations -->
+
+ <!--  <div class="destinations" id="destinations">
+    <div class="container">
+      <div class="row">
+        <div class="col text-center">
+          <div class="section_subtitle">simply amazing places</div>
+          <div class="section_title"><h2>Popular Destinations</h2></div>
+        </div>
+      </div>
+      <div class="row destinations_row">
+        <div class="col">
+          <div class="destinations_container item_grid">
+            {% for dest in destt %}
+           
+            <div class="destination item">
+              <div class="destination_image">
+                <img src="{{dest.imagev.url}}" alt="">
+                {% if dest.offer %}
+                <div class="spec_offer text-center"><a href="#">Special Offer</a></div>
+                {% endif %}
+              </div>
+              <div class="destination_content">
+                {% if user.is_authenticated %}
+                <div class="destination_title"><a href="detail">{{dest.name}}</a></div>
+                <div class="destination_subtitle"><p>{{dest.description}}</p></div>
+                <div class="destination_price">From ${{dest.price}}</div>
+                {% else %}
+                <div class="destination_title"><a href="accounts/login">{{dest.name}}</a></div>
+                <div class="destination_subtitle"><p>{{dest.description}}</p></div>
+                <div class="destination_price">From ${{dest.price}}</div>
+                {% endif %}
+              </div>
+            </div>
+            {% endfor %}
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> -->
+<!-- -------------------------------------------- -->
+ <!-- {% for dest in destt %}
+    <div class="grid-item">
+      <div class="destination_image">
+       
+        <img src="{{dest.imagev.url}}" alt="">
+          {% if dest.offer %}
+              <div class="spec_offer text-center">
+                <a href="#">Special Offer</a>
+              </div>
+          {% endif %}
+      </div>
+      {% endfor %}
+      <div class="card">
+        <img src="{% static "images/student1.png" %}" alt="John" style="width:100%">
+        <p class="title">{{dest.name}}</p>
+        <p><button><a href="/studentclick">View</a></button></p>
+      </div> -->
+</div>
+
+
+<h1>dest</h1>
+
+<div class="grid-container">
+ {% for dest in destt %}
+      
+    <div class="grid-item">
+      <div class="card"><a href="#"></a>
+       
+         {% if dest.offer %} 
+             <div class="spec">
+                <h1>offer</h1>
+               <!--  <a href="#">Special Offer</a> -->
+              </div> 
+            
+          {% endif %}
+        <!-- <h1>offer</h1> --><a href="">
+        <img   src="{{dest.imagev.url}}" style="width:100%"> </a>
+        <p class="title">{{dest.name}}</p>
+        <p><button><a href="/studentclick">View</a></button></p>
+      </div>
+    </div>
+   {% endfor %}
+
+  </div>
+
+  <!--
+written By : sumit kumar
+facebook : fb.com/sumit.luv
+-->
+
+
+</body>
+
+</html>

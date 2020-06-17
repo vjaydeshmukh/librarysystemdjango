@@ -1,0 +1,53 @@
+{% extends 'admin/base.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Addddmin Panel</title>
+<style>
+	.header{
+    height: 50px;
+    background: #10284e;
+    color: #fff;
+}
+
+.branding{
+    color: #fff;
+}
+
+a:link,
+a:visited{
+    color:#10284e;
+}
+
+div.breadcrumbs{
+    background: #30caa0;
+    color:#10284e;
+}
+
+div.breadcrumbs a{
+    color: #333;
+}
+
+.module h2,.module caption,.inline-group h2{
+    background: #30caa0;
+}
+
+
+
+
+
+	
+</style>
+</head>
+</html>
+{% block branding %}
+   <h1 id = "head" style="color:#fff">
+      <img src="{% static '/img/icon.png' %}" alt="" height="50" width="80"
+           class="brand_img">&nbsp;&nbsp;MySite - Adddddddddddmin Panel
+   </h1>
+{% endblock %}
+<!-- {% block extrastyle %}
+    <link rel="stylesheet" href="{% static 'myapp/admin.css' %}">
+{% endblock %}
+ -->
